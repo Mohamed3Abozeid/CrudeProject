@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Crude Project</title>
+</head>
+
+<body class="bg-dark">
+    <header class="w-100 p-2">
+
+        <div class="col-sm-10  p-3 my-2 mx-auto bg-success  rounded-3 text-white">
+            <h1 class="my-3 text-center">Crude Project</h1>
+            <div class="mt-3">
+                <label for="name">Name : </label>
+                <input type="text" class="form-control " id="name" placeholder="Name...." oninput="nameValid()">
+                <div class="alert alert-danger my-1 text-center d-none" id="nameEror">Plese Enter Valid Name,Name Must Start With UpperCase And Have Only Characters</div>
+            </div>
+            <div class="mt-3">
+                <label for="Email">Email : </label>
+                <input type="email" class="form-control" id="email" placeholder="Email...." oninput="emailValid()">
+                <div class="alert alert-danger my-1 text-center d-none " id="emailEror">Email Invalid</div>
+            </div>
+            <div class="mt-3">
+                <label for="Phone">Phone : </label>
+                <input type="text" class="form-control" id="phone" placeholder="Phone...." oninput="phonelValid()">
+                <div class="alert alert-danger my-1 text-center  d-none" id="phoneEror">Phone Invalid</div>
+
+            </div>
+
+            <button class="btn btn-light w-100 my-3 text-success fw-bolder" id="add-btn">Add New Employee</button>
+            <button class="btn btn-warning w-100 my-3 text-white fw-bolder d-none" id="update-btn">Update Item</button>
+
+            <input type="search" name="search" id="searchInput" placeholder="Enter Name For Search .."
+                oninput="seachItem()" class="form-control w-75 mx-auto my-3">
+            <table class="table table-striped-columns ">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Updata</th>
+                        <th>Delet</th>
+                    </tr>
+                </thead>
+                <tbody id="row">
+
+                </tbody>
+            </table>
+        </div>
+
+
+    </header>
+
+
+
+
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/main.js"></script>
+</body>
+
+</html>
